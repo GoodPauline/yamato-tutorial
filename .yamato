@@ -1,0 +1,17 @@
+helloworld:
+  name: Hello World
+  agent:
+    image: cds-ops/ubuntu:stable
+    type: Unity::VM
+    flavor: intel.8C16G
+  commands:
+  - command: echo "Hello, World!" > hello.txt
+  - command: echo "Hello, World@" > hello2.txt
+  artifacts:
+    output:
+      paths:
+      - hello.txt
+    output2:
+      paths:
+      - hello2.txt
+    
